@@ -1,31 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import './Search.css';
 import Result from './Result';
-import {fetchGeolocation, fetchCurrentGeolocation, fetchTripInfo} from './fetchApi';
+import {fetchGeolocation, fetchCurrentGeolocation, fetchResults} from './fetchApi';
 
-function Search({ stateTripInfo, setStateTripInfo, setStateSonar }) {
+function Search({ setStateSonar }) {
+  const [ stateResults, setStateResults ] = useState(undefined);
   const [ stateOrigin, setStateOrigin ] = useState(undefined);
   const [ stateDestination, setStateDestination ] = useState(undefined);
 
   useEffect(() => {
     if (stateOrigin && stateDestination) {
-      fetchTripInfo(stateOrigin, stateDestination, setStateTripInfo)
+      fetchResults(stateOrigin, stateDestination, setStateResults)
     }
-  }, [ stateOrigin, stateDestination, setStateTripInfo ])
+  }, [ stateOrigin, stateDestination, setStateResults ])
   
 
   const searchTrip = () => {
-    const trip = getInput();
-    fetchGeolocation(trip.destination, setStateDestination);
+    const search = getInput();
+    fetchGeolocation(search.destination, setStateDestination);
     document.querySelector('input').removeAttribute('hidden');
     document.querySelector('.Search__results').removeAttribute('hidden');
 
-    if (!trip.origin) {
+    if (!search.origin) {
       fetchCurrentGeolocation(setStateOrigin);
       return;
     }
 
-    fetchGeolocation(trip.origin, setStateOrigin);
+    fetchGeolocation(search.origin, setStateOrigin);
   }
 
   const getInput = () => {
@@ -45,7 +46,7 @@ function Search({ stateTripInfo, setStateTripInfo, setStateSonar }) {
       <input className="Search__input" type="text" placeholder="Hi, where do you want to go?"></input>
       <button className="Search__button" onClick={searchTrip}>Search</button>
       <div className="Search__results">
-        { stateTripInfo && stateTripInfo.map((trip, i) => {
+        { stateResults && stateResults.map((trip, i) => {
           const { Origin, Destination, Product } = trip.LegList.Leg[1];
           return ( <Result key={i} origin={Origin} destination={Destination} product={Product} setStateSonar={setStateSonar}/> );
         })}
