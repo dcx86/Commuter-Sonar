@@ -1,0 +1,75 @@
+.Sonar {
+  display: none;
+  justify-content: space-evenly;
+}
+
+.Sonar__alarm {
+  flex-grow: 1;
+  border-radius: 0.8rem;
+  min-height: 10rem;
+  max-width: 10rem;
+  margin-bottom: 3rem;
+  background-color: #005f1c;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between; 
+}
+
+.Sonar__setAlarm {
+  flex-grow: 1;
+  border-radius: 0.8rem;
+  min-height: 40rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  background-color: #005f1c;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between; 
+}
+
+.Sonar__alarm__header {
+  background-color: #048f46 !important;
+  font-weight: bold;
+}
+
+.Sonar__alarm__logo {
+  margin-top: 1rem;
+}
+
+.Sonar__body {
+
+}
+
+.Sonar__body h4 {
+  color: wheat;
+}
+
+.Sonar__body h5 {
+  color: #EE2712
+}
+
+.Sonar__button {
+  border: none;
+  border-bottom: .2rem solid #EE2712;
+  min-height: 3rem;
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  background-color: #048f46;
+  color: whitesmoke;
+  border-radius: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.Sonar__alarm > p {
+  color: whitesmoke;
+  font-weight: 900;
+}
+
+.Sonar__setAlarm > p {
+  color: whitesmoke;
+  font-weight: 900;
+}

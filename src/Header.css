@@ -1,0 +1,28 @@
+.Header {
+  background-color: #005f1c;
+  max-height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.Header__logo {
+  margin-left: 1rem;
+  height: 2rem;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: militech;
+  src: url(./fonts/militech.otf);
+}
+
+.Header__name {
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  font-family: militech;
+}
+
+.Header__name--red {
+  color: #EE2712;
+}
