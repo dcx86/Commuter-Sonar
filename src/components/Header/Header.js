@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './icons/radar.svg';
+import logo from '../../assets/images/radar.svg';
 import './Header.css';
 
 function Header() {

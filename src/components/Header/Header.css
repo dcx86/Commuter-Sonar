@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: militech;
-  src: url(./fonts/militech.otf);
+  src: url(../../assets/fonts/militech.otf);
 }
 
 .Header__name {

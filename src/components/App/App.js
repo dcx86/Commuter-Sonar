@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Header from './Header';
-import Search from './Search';
-import Workspace from './Workspace';
-import Footer from './Footer';
+import Header from '../Header/Header';
+import Search from '../Search/Search';
+import Workspace from '../Workspace/Workspace';
+import Footer from '../Footer/Footer';
 
 import './App.css';
 

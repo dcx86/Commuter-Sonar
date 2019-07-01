@@ -1,6 +1,6 @@
 import React from 'react';
 import './Workspace.css';
-import Sonar from './Sonar';
+import Sonar from '../Sonar/Sonar';
 
 function Workspace({ stateSonar }) {
   return (

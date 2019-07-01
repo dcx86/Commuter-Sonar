@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Search.css';
-import Result from './Result';
-import {fetchGeolocation, fetchCurrentGeolocation, fetchResults} from './fetchApi';
+import Result from '../Result/Result';
+import {fetchGeolocation, fetchCurrentGeolocation, fetchResults} from '../../utils/fetchApi';
 
 function Search({ setStateSonar }) {
   const [ stateResults, setStateResults ] = useState(undefined);

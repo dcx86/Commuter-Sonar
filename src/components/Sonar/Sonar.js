@@ -1,8 +1,8 @@
 import React from 'react';
-import icon from './icons/hearing.svg';
+import icon from '../../assets/images/hearing.svg';
 import './Sonar.css';
-import { getUnixTime } from './parsing';
-import setSonar from './setSonar';
+import { getUnixTime } from '../../utils/parsing';
+import setSonar from '../../utils/setSonar';
 import Countdown from 'react-countdown-now';
 
 function Sonar({stateSonar}) {
